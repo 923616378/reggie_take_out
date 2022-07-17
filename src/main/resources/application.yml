@@ -1,0 +1,26 @@
+server:
+  port: 80
+  tomcat:
+    accesslog:
+      suffix:
+  servlet:
+    session:
+      persistent: true #开启tomcat的session持久化
+spring:
+  devtools:
+    restart:
+      enabled: false
+  datasource:
+    url: jdbc:mysql://localhost/reggie
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: xxx
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: assign_id
+# 文件上传保存路径
+reggie:
+  basePath: D:\img\
